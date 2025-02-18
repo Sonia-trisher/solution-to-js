@@ -157,11 +157,12 @@ function filterNumbers(arr, threshold) {
 console.log(filterNumbers([5, 10, 15, 20, 25], 10)); // Output: [15, 20, 25]
 
 
+// a)write  average function that show score of student
+// b)write and modify student who get more score
+// c)discuss function that is being declared
 
-
-
-
-
+// a) Write an average function that shows the score of students
+// for i perfer the first way ;
 
 function calculateAverage(scores){
     let sum = 0;
@@ -175,5 +176,110 @@ function calculateAverage(scores){
 console.log(calculateAverage([85,90,78,88,92]));
 
 
+// function calculateAverage(scores) {
+//     let total = scores.reduce((sum, score) => sum + score, 0);
+//     return total / scores.length;
+// }
 
-    
+
+
+
+
+// b) Write and Modify a Function to Find Students with the Highest Score
+function getTopScorers(students) {
+    let maxScore = Math.max(...students.map(student => student.score));
+    return students.filter(student => student.score === maxScore);
+}
+// c) Discussing the Function Declaration
+const students = [
+    { name: "Alice", score: 85 },
+    { name: "Bob", score: 92 },
+    { name: "Charlie", score: 88 },
+    { name: "David", score: 92 }
+];
+
+// console.log(" Average Score:", calculateAverage(students.map(s => s.score)));
+
+console.log("Top Scorers:", getTopScorers(students));
+
+
+
+
+
+
+
+
+
+
+
+// create function include condition and loop   
+    //   a)write code of function that show admin and users  
+//  b)use function and object showing user                            
+    //    c) modify that function that declare users  
+        //    d)discuss that function that declare user                                                                                                                          e)advantage of using function using filter,map,sort
+
+
+
+// a) Function that shows admin and users
+function showUsers(users) {
+    for (let user of users) {
+        if (user.role === "admin") {
+            console.log(`Admin: ${user.name}`);
+        } else {
+            console.log(`User: ${user.name}`);
+        }
+    }
+}
+// b) Using function and object to show users
+const usersList = [
+    { name: "Alice", role: "admin" },
+    { name: "Bob", role: "user" },
+    { name: "Charlie", role: "user" }
+];
+
+showUsers(usersList);
+// // c) Modify the function to declare users
+function declareUsers(users) {
+    return users.map(user => {
+        return `${user.name} is a ${user.role}`;
+    });
+}
+
+console.log(declareUsers(usersList));
+// // d) Discussion of the function
+// // The declareUsers function takes an array of users.
+// // It uses map() to transform each user object into a string that describes the user.
+// // This makes it more readable and reusable.
+
+
+
+// // e) Advantages of using functions with filter, map, and sort
+// // filter
+const admins = usersList.filter(user => user.role === "admin");
+console.log(admins);
+// // map
+const userNames = usersList.map(user => user.name);
+console.log(userNames);
+// // sort
+const sortedUsers = usersList.sort((a, b) => a.name.localeCompare(b.name));
+console.log(sortedUsers);
+
+
+
+    // another way
+//     🔹 Showing Users:
+// Admin: Alice
+// User: Charlie
+// User: Bob
+
+// 🔹 Declaring Users:
+// ['Alice is a admin', 'Charlie is a user', 'Bob is a user']
+
+// 🔹 Filtering Admins:
+// [{ name: 'Alice', role: 'admin', age: 25 }]
+
+// 🔹 Sorting Users Alphabetically:
+// [{ name: 'Alice' }, { name: 'Bob' }, { name: 'Charlie' }]
+
+// 🔹 Sorting Users by Age:
+// [{ name: 'Bob', age: 22 }, { name: 'Alice', age: 25 }, { name: 'Charlie', age: 30 }]
