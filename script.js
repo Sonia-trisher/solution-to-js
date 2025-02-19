@@ -220,49 +220,49 @@ console.log("Top Scorers:", getTopScorers(students));
 
 
 
-// a) Function that shows admin and users
-function showUsers(users) {
-    for (let user of users) {
-        if (user.role === "admin") {
-            console.log(`Admin: ${user.name}`);
-        } else {
-            console.log(`User: ${user.name}`);
-        }
-    }
-}
-// b) Using function and object to show users
-const usersList = [
-    { name: "Alice", role: "admin" },
-    { name: "Bob", role: "user" },
-    { name: "Charlie", role: "user" }
-];
+// // a) Function that shows admin and users
+// function showUsers(users) {
+//     for (let user of users) {
+//         if (user.role === "admin") {
+//             console.log(`Admin: ${user.name}`);
+//         } else {
+//             console.log(`User: ${user.name}`);
+//         }
+//     }
+// }
+// // b) Using function and object to show users
+// const usersList = [
+//     { name: "Alice", role: "admin" },
+//     { name: "Bob", role: "user" },
+//     { name: "Charlie", role: "user" }
+// ];
 
-showUsers(usersList);
-// // c) Modify the function to declare users
-function declareUsers(users) {
-    return users.map(user => {
-        return `${user.name} is a ${user.role}`;
-    });
-}
+// showUsers(usersList);
+// // // c) Modify the function to declare users
+// function declareUsers(users) {
+//     return users.map(user => {
+//         return `${user.name} is a ${user.role}`;
+//     });
+// }
 
-console.log(declareUsers(usersList));
-// // d) Discussion of the function
-// // The declareUsers function takes an array of users.
-// // It uses map() to transform each user object into a string that describes the user.
-// // This makes it more readable and reusable.
+// console.log(declareUsers(usersList));
+// // // d) Discussion of the function
+// // // The declareUsers function takes an array of users.
+// // // It uses map() to transform each user object into a string that describes the user.
+// // // This makes it more readable and reusable.
 
 
 
-// // e) Advantages of using functions with filter, map, and sort
-// // filter
-const admins = usersList.filter(user => user.role === "admin");
-console.log(admins);
-// // map
-const userNames = usersList.map(user => user.name);
-console.log(userNames);
-// // sort
-const sortedUsers = usersList.sort((a, b) => a.name.localeCompare(b.name));
-console.log(sortedUsers);
+// // // e) Advantages of using functions with filter, map, and sort
+// // // filter
+// const admins = usersList.filter(user => user.role === "admin");
+// console.log(admins);
+// // // map
+// const userNames = usersList.map(user => user.name);
+// console.log(userNames);
+// // // sort
+// const sortedUsers = usersList.sort((a, b) => a.name.localeCompare(b.name));
+// console.log(sortedUsers);
 
 
 
@@ -283,3 +283,39 @@ console.log(sortedUsers);
 
 // 🔹 Sorting Users by Age:
 // [{ name: 'Bob', age: 22 }, { name: 'Alice', age: 25 }, { name: 'Charlie', age: 30 }]
+
+
+
+
+// create function include condition and loop   
+    //   a)write code of function that show admin and users  
+//  b)use function and object showing user                            
+    //    c) modify that function that declare users  
+        //    d)discuss that function that declare user                                                                                                                          e)advantage of using function using filter,map,sort
+function showUsers(users){
+    for(let user of users){
+        if(user.role ==="admin"){
+console.log(`admin : ${user.name}`);
+
+        }else {
+            console.log(`user:${user.name}`);
+
+        }
+           
+            
+     
+    }
+}
+//  b)use function and object showing user  
+const usersList = [
+    {
+        name:"sonia",
+        role:"admin"
+    }
+];
+showUsers(usersList);
+// c) Modify the function to declare users
+function declareUsers( users){
+    return users.map(user=>{return `${user.name} is a ${user.role}`});
+}
+console.log({});
